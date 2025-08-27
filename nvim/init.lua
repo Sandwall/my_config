@@ -22,17 +22,29 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.autoread = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.opt.termguicolors = true
+
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.o.tabstop = 2 -- Number of spaces a tab represents
+vim.o.shiftwidth = 2 -- Number of spaces for each indentation
+vim.o.expandtab = false -- Try to use tabs over spaces
+vim.o.autoread = true -- autoread on change
+vim.o.smartindent = true -- Automatically indent new lines
+vim.o.wrap = false -- Disable line wrapping
+vim.o.cursorline = true -- Highlight the current line
+vim.o.termguicolors = true -- Enable 24-bit RGB colors
 
 vim.g.clipboard = 'clip'
+
 if vim.g.neovide then
+  vim.o.guifont = "Iosevka NFM"
+  vim.g.neovide_title_text_color = "pink"
+  vim.g.neovide_cursor_animation_length = 0.09
+  vim.g.neovide_cursor_trail_size = 0.5
+  vim.g.neovide_cursor_smooth_blink = true
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
   vim.keymap.set('n', '<C-s>', ':w<CR>') -- Save
   vim.keymap.set('v', '<C-c>', '"+y') -- Copy
   vim.keymap.set('n', '<C-v>', '"+P') -- Paste normal mode
