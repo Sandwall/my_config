@@ -1,2 +1,27 @@
 # my_config
-Monorepo that contains configurations/dotfiles that I use.
+Monorepo that contains configurations/dotfiles that I use, in addition to useful information.
+
+## Visual Studio C++ Project Configuration
+- Output Directory: `$(SolutionDir)$(Configuration)-$(Platform)`
+- Intermediate Directory: `$(SolutionDir)$(Configuration)-$(Platform)\obj`
+- Include Directories: `$(SolutionDir)include`
+- Library Directories: `$(SolutionDir)lib\$(Platform)`
+
+.gitignore template:
+```
+.vs/
+.vscode/
+
+bin/
+lib/
+!lib/README.md
+
+*.dll
+*.exe
+*.obj
+*.a
+*.o
+*.out
+*.lib
+
+```
