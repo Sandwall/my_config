@@ -16,4 +16,5 @@ doskey ll=dir /og /x $*
 doskey cat=type $*
 doskey clear=cls
 doskey macros=doskey /macros
-doskey vcvars="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -startdir=none -arch=x64 -host_arch=x64
+doskey vcvars26="C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\VsDevCmd.bat" -startdir=none -arch=x64 -host_arch=x64
+doskey vcvars22="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -startdir=none -arch=x64 -host_arch=x64
